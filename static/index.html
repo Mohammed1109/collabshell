@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>CollabShell</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="left">
+      <h1>CollabShell</h1>
+      <div class="meta">
+        Room: <span id="room-id"></span> 
+        Users: <span id="users">1</span>
+      </div>
+    </div>
+
+    <div class="right">
+      <label class="upload-btn">
+        Upload File
+        <input type="file" id="file-input" hidden />
+      </label>
+    </div>
+  </header>
+
+  <div class="files-panel">
+    <div id="file-list"></div>
+  </div>
+
+  <div class="editor-container" id="drop-zone">
+    <div id="line-numbers"></div>
+    <textarea id="editor" placeholder="Start typing here..."></textarea>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+
+</html>
