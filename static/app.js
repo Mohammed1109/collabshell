@@ -22,15 +22,18 @@ let localChange = false;
 // ---------- LINE NUMBERS ----------
 function updateLineNumbers() {
   const lines = editor.value.split("\n").length;
-  let out = "";
-  for (let i = 1; i <= lines; i++) out += i + "\n";
-  lineNumbers.innerText = out;
+  let output = "";
+
+  for (let i = 1; i <= lines; i++) {
+    output += i + "\n";
+  }
+
+  document.getElementById("line-numbers-inner").textContent = output;
 }
 
 editor.addEventListener("scroll", () => {
-  lineNumbers.scrollTop = editor.scrollTop;
+  document.getElementById("line-numbers").scrollTop = editor.scrollTop;
 });
-
 // ---------- SOCKET EVENTS ----------
 socket.onmessage = (event) => {
   const msg = JSON.parse(event.data);

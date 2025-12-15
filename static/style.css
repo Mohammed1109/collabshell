@@ -78,32 +78,45 @@ body {
 }
 
 /* ---------- EDITOR ---------- */
+
 .editor-container {
   display: flex;
   height: calc(100vh - 140px);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
+/* ---------- LINE NUMBERS ---------- */
 #line-numbers {
   background: #020617;
   color: #64748b;
-  padding: 15px 10px;
+  border-right: 1px solid #1e293b;
+  padding: 15px 8px;
   text-align: right;
   user-select: none;
-  border-right: 1px solid #1e293b;
-  min-width: 45px;
+  min-width: 48px;
   overflow: hidden;
 }
 
+#line-numbers pre {
+  margin: 0;
+  line-height: 1.6;
+}
+/* ---------- EDITOR ---------- */
 #editor {
   flex: 1;
   border: none;
   outline: none;
   resize: none;
   padding: 15px;
-  font-size: 14px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
   background: #020617;
   color: #e5e7eb;
-  line-height: 1.5;
+  overflow: auto;
+  white-space: pre;
 }
 /* ---------- DRAG & DROP ---------- */
 #drop-zone.dragover {
